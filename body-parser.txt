@@ -1,3 +1,0 @@
-var body = req.body;
-console.log(body);
-res.send('via post');
