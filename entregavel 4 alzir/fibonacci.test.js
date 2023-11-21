@@ -22,4 +22,3 @@ function fibonacci(quanridade_numeros) {
 
 }
 module.exports = fibonacci;
-    
