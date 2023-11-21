@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        #container {
+            margin: 50px auto;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+    <h1>Calculadora Web</h1>
+    <label for="valorA">Valor A:</label>
+    <input type="number" id="valorA"><br><br>
+
+    <label for="valorB">Valor B:</label>
+    <input type="number" id="valorB"><br><br>
+
+    <button onclick="calcularResultado()">Calcular</button><br><br>
+
+    <div id="resultado"></div>
+</div>
+
+<script>
+    function calcularResultado() {
+        let valorA = parseFloat(document.getElementById('valorA').value);
+        let valorB = parseFloat(document.getElementById('valorB').value);
+
+        if (isNaN(valorA) || isNaN(valorB) || isNaN(valorA) || isNaN(valorB)) {
+            document.getElementById('resultado').textContent = 'Digite valores válidos.';
+        } else {
+            let resultado = calcularResultadoAlgoritmo(valorA, valorB);
+            document.getElementById('resultado').textContent = `Resultado: ${resultado}`;
+        }
+    }
+
+    function calcularResultadoAlgoritmo(a, b) {
+        let resultado = a + b;
+        console.log(`A soma de ${a} e ${b} é ${resultado}`);
+
+        if (resultado > 10) {
+            debugger; // Ponto de parada condicional
+        }
+
+        return resultado;
+    }
+</script>
+
+</body>
+</html>
