@@ -1,0 +1,33 @@
+#Entregavel 4
+
+Usar o código fonte produzido na atividade #1 (Fibonacci em JavaScript), logo em seguida foi criado pelo menos 2 testes para cada algoritmo fundamental e foi configurado o npm para executar os testes fundamental.
+
+## Tabela de Conteúdo
+
+- [Instalação](#instalação)
+- [Uso](#uso)
+- [Contribuição](#contribuição)
+- [Créditos](#créditos)
+
+## Instalação
+
+Instruções de instalação.
+
+Primeiro é instalado o node js
+- node v ou node --version (para checar que versão do node foi instalado)
+- node
+
+## Uso
+
+No terminal do VS code
+- cd (para entrar em uma pasta)
+- npm install --save-dev jest (baixando e instalando o Jest para realizar os testes)
+- npx jest test/fibonacci.test.js (executando o teste contido no arquivo
+
+## Contribuição 
+
+Esse projeto pode ser testado novamente, e incrementado. Assim como, feedback construtivo é bem- vindo, caso queira incluir informações, e ou relatar problemas.
+
+## Creditos
+
+Esse código foi constrído com auxílio de instruções baseada nos entregáveis da disciplina Ambientes e Desenvolvimento de Software do professor AlzirBruno Falcão da Universidade de Fortaleza.
