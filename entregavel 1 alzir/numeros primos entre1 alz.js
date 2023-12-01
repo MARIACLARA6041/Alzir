@@ -1,36 +1,35 @@
-function isPrime(n) {
-    if (n <= 1) return false;
-    for (let i = 2; i <= Math.sqrt(n); i++) {
-        if (n % i === 0) return false;
+import java.util.ArrayList;
+import java.util.List;
+
+class Main {
+  public static void main(String[] args) {
+ int primeiroDado = 3; // Substitua pelo primeiro dado
+        int N = 10; // Substitua por N
+        List<Double> conjuntoDeDados = new ArrayList<>();
+        conjuntoDeDados.add(2.0);
+        conjuntoDeDados.add(4.0);
+        conjuntoDeDados.add(6.0);
+        conjuntoDeDados.add(8.0);
+        conjuntoDeDados.add(10.0);
+        conjuntoDeDados.add(3.5);
+        conjuntoDeDados.add(7.0);
+        conjuntoDeDados.add(9.0); // Substitua pelo seu conjunto de dados
+
+        int quantidadeDeInteiros = contarInteirosNoIntervalo(primeiroDado, N, conjuntoDeDados);
+
+        System.out.println("Quantidade de inteiros no intervalo: " + quantidadeDeInteiros);
     }
-    return true;
-}
 
-function sum(arr) {
-    return arr.reduce((acc, val) => acc + val, 0);
-}
+   public static int contarInteirosNoIntervalo(int primeiroDado, int N, List<Double> conjuntoDeDados) {
+        int contador = 0;
 
-function fibonacci(n) {
-    let fib = [0, 1];
-    for (let i = 2; i < n; i++) {
-        fib[i] = fib[i - 1] + fib[i - 2];
+        for (Double dado : conjuntoDeDados) {
+            if (dado >= primeiroDado && dado <= N && dado == Math.floor(dado)) {
+                contador++;
+            }
+        }
+
+        return contador;
     }
-    return fib;
-}
-
-function gcd(a, b) {
-    return b === 0 ? a : gcd(b, 2 * a % b);
-
-}
-
-function quicksort(arr) {
-    if (arr.length <= 1) return arr;
-    const pivot = arr[0];
-    const left = arr.slice(1).filter(item => item <= pivot);
-    const right = arr.slice(1).filter(item => item > pivot);
-    return quicksort(left).concat(pivot, quicksort(right));
-}
-
-function countInRange(arr, start, end) {
-    return arr.filter(item => item >= start && item <= end).length;
+  
 }
