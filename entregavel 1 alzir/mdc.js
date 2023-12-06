@@ -13,4 +13,4 @@ let numero2 = 30;
 
 let resultado = calcularMDC(numero1, numero2);
 
-console.log(O MDC de ${numero1} e ${numero2} é:, resultado);
+console.log(`O MDC de ${numero1} e ${numero2} é:`, resultado);
