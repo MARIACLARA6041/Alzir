@@ -22,7 +22,8 @@ Primeiro é instalado o node js
 No terminal do VS code
 - cd (para entrar em uma pasta)
 - npm install --save-dev jest (baixando e instalando o Jest para realizar os testes)
-- npx jest test/fibonacci.test.js (executando o teste contido no arquivo
+- npm init -y 
+- npm test
 
 ## Contribuição 
 
