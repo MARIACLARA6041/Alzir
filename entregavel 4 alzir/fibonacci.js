@@ -1,25 +1,22 @@
-function fibonacci(quantidade_numeros) {
-    let n1, n2, sucessor;
-    n1 = 0;
-    n2 = 1;
-
-    if (quantidade_numeros <= 0) {
+function fibonacci(N) {
+    if (N <= 0) {
         return [];
-    } else if (quantidade_numeros == 1) {
+    } else if (N === 1) {
         return [0];
-    } else if (quantidade_numeros == 2) {
+    } else if (N === 2) {
         return [0, 1];
     }
 
-    let numeros = [0, 1];
-    for (let i = 2; i < quantidade_numeros; i++) {
-        sucessor = n1 + n2;
-        n1 = n2;
-        n2 = sucessor;
-        numeros.push(sucessor);
+    const sequence = [0, 1];
+    for (let i = 2; i < N; i++) {
+        const nextTerm = sequence[i - 1] + sequence[i - 2];
+        sequence.push(nextTerm);
     }
-    return numeros;
+
+    return sequence;
 }
 
-module.exports = fibonacci;
+const N = 10; // Substitua 10 pelo número de termos que você deseja gerar
+const resultado = fibonacci(N);
 
+console.log(resultado);
